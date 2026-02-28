@@ -1,0 +1,9 @@
+{
+  "name": "Namma Route",
+  "description": "Smart transit app for Tamil Nadu featuring real-time bus tracking, gender-specific seat availability, and AR tourist mode.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation",
+    "microphone"
+  ]
+}

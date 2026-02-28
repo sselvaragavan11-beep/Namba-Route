@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --color-brand-primary: #FF6321; /* Vibrant Orange */
+  --color-brand-secondary: #00875A; /* Deep Green */
+}
+
+@layer base {
+  body {
+    @apply bg-stone-50 text-stone-900 font-sans;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-sm;
+}
+
+.animated-gradient {
+  background: linear-gradient(-45deg, #FF6321, #FF9E21, #00875A, #00A36C);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3 {
+  @apply font-display font-bold text-brand-primary mt-6 mb-3;
+}
+
+.markdown-body p {
+  @apply text-stone-600 leading-relaxed mb-4;
+}
+
+.markdown-body ul {
+  @apply space-y-2 mb-6 list-none;
+}
+
+.markdown-body li {
+  @apply flex items-start gap-2 text-stone-600;
+}
+
+.markdown-body li::before {
+  content: "•";
+  @apply text-brand-secondary font-bold;
+}
+
+.markdown-body strong {
+  @apply text-stone-900 font-bold;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
